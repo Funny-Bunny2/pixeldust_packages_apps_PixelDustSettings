@@ -73,8 +73,6 @@
     <string name="weather_show_weather_summary">Aktiviert die Anzeige der Wetterinformationen</string>
     <string name="weather_show_location_title">Standort anzeigen</string>
     <string name="weather_show_location_summary">Aktiviert die Anzeige der Standortinformationen</string>
-    <string name="weather_show_timestamp_title">Zeitstempel anzeigen</string>
-    <string name="weather_show_timestamp_summary">Aktiviert die Anzeige des Zeitstempels der letzten Aktualisierung</string>
     <string name="weather_condition_icon_title">Zustandssymbol</string>
     <string name="weather_condition_icon_dlg_title">Wähle ein Symbol für die Anzeige der Wetterlage</string>
     <string name="weather_condition_icon_monochrome_title">Monochrom</string>
@@ -93,6 +91,9 @@
     <string name="weather_hide_panel_custom_summary">Die Wetteranzeige wird versteckt, sobald die selbst ausgewählte Anzahl an sichtbaren Benachrichtigungen auf dem Sperrbildschirm erreicht ist</string>
     <string name="weather_hide_panel_never_summary">Die Wetteranzeige wird nicht versteckt</string>
     <string name="weather_number_of_notifications_title">Anzahl an Benachrichtigungen</string>
+    <string name="weather_settings_options_title">Standort Einstellungen</string>
+    <string name="weather_settings_summary">Standort wählen und weitere Einstellungen</string>
+    <string name="weather_show_location_summary">Standortinformationen anzeigen</string>
 
     <!-- Power Menu -->
     <string name="powermenu_reboot">Neustart</string>

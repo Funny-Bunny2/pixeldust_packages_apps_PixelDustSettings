@@ -199,8 +199,6 @@
     <string name="weather_show_weather_summary">Enable to show weather information</string>
     <string name="weather_show_location_title">Show location</string>
     <string name="weather_show_location_summary">Enable to show the location</string>
-    <string name="weather_show_timestamp_title">Show timestamp</string>
-    <string name="weather_show_timestamp_summary">Enable to show the timestamp</string>
     <string name="weather_condition_icon_title">Condition icon</string>
     <string name="weather_condition_icon_dlg_title">Choose an icon for displaying the weather condition</string>
     <string name="weather_condition_icon_monochrome_title">Monochrome</string>
@@ -219,6 +217,9 @@
     <string name="weather_hide_panel_custom_summary">The weather panel will be hidden when the visible notifications will reach the chosen number of notifications</string>
     <string name="weather_hide_panel_never_summary">The weather panel won\`t be hidden</string>
     <string name="weather_number_of_notifications_title">Number of notifications</string>
+    <string name="weather_settings_options_title">Location settings</string>
+    <string name="weather_settings_summary">Choose location and other settings</string>
+    <string name="weather_show_location_summary">Display weather location</string>
 
     <!-- Lockscreen clock fonts -->
     <string name="lock_clock_font_title">Lock screen clock font</string>
