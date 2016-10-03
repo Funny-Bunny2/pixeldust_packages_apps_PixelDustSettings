@@ -50,4 +50,10 @@
         android:summary="@string/fp_unlock_keystore_summary"
         android:persistent="false" />
 
+    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+        android:key="keyguard_toggle_torch"
+        android:title="@string/keyguard_torch_title"
+        android:summary="@string/keyguard_torch_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
