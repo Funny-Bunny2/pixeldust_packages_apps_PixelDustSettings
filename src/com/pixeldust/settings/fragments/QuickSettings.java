@@ -103,6 +103,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private SecureSettingSwitchPreference mQsLock;
     private PreferenceCategory mWeatherCategory;
     private ListPreference mWeatherIconPack;
+    private String mWeatherIconPackNote;
 
     private static final int MY_USER_ID = UserHandle.myUserId();
 
@@ -114,6 +115,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         ContentResolver resolver = getActivity().getContentResolver();
         PreferenceScreen prefScreen = getPreferenceScreen();
         final LockPatternUtils lockPatternUtils = new LockPatternUtils(getActivity());
+        mWeatherIconPackNote = getResources().getString(R.string.weather_icon_pack_note);
 
         PreferenceCategory qscat = (PreferenceCategory) findPreference(QS_CAT);
 
@@ -224,7 +226,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
                 valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingHeaderPackage);
             }
             mWeatherIconPack.setValueIndex(valueJawsIndex >= 0 ? valueJawsIndex : 0);
-            mWeatherIconPack.setSummary(mWeatherIconPack.getEntry());
+            mWeatherIconPack.setSummary(mWeatherIconPackNote + "\n\n" + mWeatherIconPack.getEntry());
             mWeatherIconPack.setOnPreferenceChangeListener(this);
         }
     }
@@ -284,7 +286,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             Settings.System.putString(getContentResolver(),
                     Settings.System.OMNIJAWS_WEATHER_ICON_PACK, value);
             int valueIndex = mWeatherIconPack.findIndexOfValue(value);
-            mWeatherIconPack.setSummary(mWeatherIconPack.getEntries()[valueIndex]);
+            mWeatherIconPack.setSummary(mWeatherIconPackNote + " \n\n" + mWeatherIconPack.getEntries()[valueIndex]);
             return true;
         }
         return false;
