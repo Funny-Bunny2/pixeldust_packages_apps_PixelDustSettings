@@ -151,6 +151,18 @@ public final class Utils {
         return isPackageInstalled(context, pkg, true);
     }
 
+    public static boolean isPackageInstalled(String packageName, PackageManager pm) {
+        try {
+            String mVersion = pm.getPackageInfo(packageName, 0).versionName;
+            if (mVersion == null) {
+                return false;
+            }
+        } catch (NameNotFoundException notFound) {
+            return false;
+        }
+        return true;
+    }
+
     /**
      * Locks the activity orientation to the current device orientation
      * @param activity

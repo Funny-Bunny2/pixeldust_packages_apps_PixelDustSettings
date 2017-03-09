@@ -41,4 +41,17 @@
             android:fragment="com.pixeldust.settings.fragments.NetworkTraffic"
             android:title="@string/network_traffic_title" />
 
+    <PreferenceCategory
+        android:key="pref_cat_weather"
+        android:title="@string/statusbar_weather_category">
+
+        <ListPreference
+                android:key="status_bar_weather"
+                android:title="@string/statusbar_weather_title"
+                android:dialogTitle="@string/statusbar_weather_dialog_title"
+                android:entries="@array/status_bar_weather_entries"
+                android:entryValues="@array/status_bar_weather_values" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
