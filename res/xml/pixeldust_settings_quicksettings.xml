@@ -114,11 +114,6 @@
                 android:targetClass="org.omnirom.omnijaws.SettingsActivity" />
         </PreferenceScreen>
 
-        <ListPreference
-           android:key="weather_icon_pack"
-           android:title="@string/weather_icon_pack_title"
-           android:persistent="false" />
-
     </PreferenceCategory>
 
 </PreferenceScreen>
