@@ -12,7 +12,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Categories -->
-    <string name="display_settings_title">Display &amp; LED</string>
+    <string name="display_settings_title">Display und LED</string>
     <string name="button_title">Tastenbelegungen</string>
     <string name="gestures_title">Bildschirmgesten</string>
     <string name="lockscreen_title">Sperrbildschirm</string>
@@ -525,4 +525,20 @@
     <!-- Fingerprint unlock keystore -->
     <string name="fp_unlock_keystore_title">Mit Fingerabdruck entsperren</string>
     <string name="fp_unlock_keystore_summary">Das Gerät nur mittels Fingerabdruck (ohne PIN/Passwort/Muster) nach dem Neustart entsperren\nHinweis: auf eigene Verantwortung!</string>
+
+    <!-- OmniJaws -->
+    <string name="weather_title">Wetter</string>
+    <string name="weather_config_title">Wetterkachel-Einstellungen</string>
+
+    <!-- StatusBar weather settings -->
+    <string name="statusbar_weather_category">Wetter in Statusleiste und Schnelleinstellungen</string>
+    <string name="statusbar_weather_title">Statusleisten-Wetter</string>
+    <string name="statusbar_weather_summary">Die Anzeige nutzt die Einstellungen der Wetter-Kachel!</string>
+    <string name="statusbar_weather_dialog_title">Anzeigestil des Wetters</string>
+    <string name="status_bar_weather_hidden">Keine Wetteranzeige</string>
+    <string name="status_bar_temperature_image_show_scale">Temperatur mit Einheit und Bild</string>
+    <string name="status_bar_temperature_image_hide_scale">Temperatur ohne Einheit und Bild</string>
+    <string name="status_bar_temperature_show_scale_hide_image">Temperatur mit Einheit</string>
+    <string name="status_bar_temperature_hide_scale_hide_image">Temperatur ohne Einheit</string>
+<string name="status_bar_show_image">Bild</string>
 </resources>
