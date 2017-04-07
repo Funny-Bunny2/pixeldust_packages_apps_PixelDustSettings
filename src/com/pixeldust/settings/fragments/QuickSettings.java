@@ -82,6 +82,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
     private static final String CUSTOM_HEADER_PROVIDER = "custom_header_provider";
     private static final String CUSTOM_HEADER_BROWSE = "custom_header_browse";
+    private static final String KEY_SYSUI_QQS_COUNT = "sysui_qqs_count_key";
     private static final String PREF_QSLOCK = "lockscreen_qs_disabled";
     private static final String QS_CAT = "qs_panel";
     private static final String CATEGORY_WEATHER = "weather_category";
@@ -100,6 +101,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private CustomSeekBarPreference mQsColumns;
     private String mDaylightHeaderProvider;
     private PreferenceScreen mHeaderBrowse;
+    private CustomSeekBarPreference mSysuiQqsCount;
     private SecureSettingSwitchPreference mQsLock;
     private PreferenceCategory mWeatherCategory;
     private ListPreference mWeatherIconPack;
@@ -199,6 +201,12 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         mHeaderBrowse = (PreferenceScreen) findPreference(CUSTOM_HEADER_BROWSE);
         mHeaderBrowse.setEnabled(isBrowseHeaderAvailable());
 
+        mSysuiQqsCount = (CustomSeekBarPreference) findPreference(KEY_SYSUI_QQS_COUNT);
+        int SysuiQqsCount = Settings.Secure.getInt(getContentResolver(),
+                Settings.Secure.QQS_COUNT, 6);
+        mSysuiQqsCount.setValue(SysuiQqsCount / 1);
+        mSysuiQqsCount.setOnPreferenceChangeListener(this);
+
         //OmniJaws
         mWeatherCategory = (PreferenceCategory) prefScreen.findPreference(CATEGORY_WEATHER);
         if (mWeatherCategory != null && !isOmniJawsServiceInstalled()) {
@@ -280,6 +288,11 @@ public class QuickSettings extends SettingsPreferenceFragment implements
                     Settings.System.STATUS_BAR_CUSTOM_HEADER_PROVIDER, value);
             int valueIndex = mHeaderProvider.findIndexOfValue(value);
             mHeaderProvider.setSummary(mHeaderProvider.getEntries()[valueIndex]);
+            return true;
+        } else if (preference == mSysuiQqsCount) {
+            int SysuiQqsCount = (Integer) newValue;
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.QQS_COUNT, SysuiQqsCount * 1);
             return true;
         } else if (preference == mWeatherIconPack) {
             String value = (String) newValue;

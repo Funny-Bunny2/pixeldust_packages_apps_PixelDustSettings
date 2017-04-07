@@ -327,9 +327,8 @@
     <!-- Quicks settings titles -->
     <string name="qs_tile_title_visibility_title">Quick settings titles</string>
     <string name="qs_tile_title_visibility_summary">Enable titles on quick settings</string>
-    <!-- Quicks settings all tile scroller -->
-    <string name="qqs_scroll_title">Scroll small QS tiles</string>
-    <string name="qqs_scroll_summary">Allow scrolling through the small QS tiles</string>
+    <!--- Small tiles count -->
+    <string name="sysui_qqs_count_title">Small quick tiles count</string>
     <!-- Quicks settings vibrate -->
     <string name="quick_settings_vibrate_title">Vibrate on touch</string>
     <string name="quick_settings_vibrate_summary">Vibrate when touching tiles</string>

@@ -81,11 +81,13 @@
             settings:units=""
             android:persistent="false" />
 
-        <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
-            android:key="qs_quickbar_scroll_enabled"
-            android:title="@string/qqs_scroll_title"
-            android:summary="@string/qqs_scroll_summary"
-            android:defaultValue="false"/>
+        <com.pixeldust.settings.preferences.CustomSeekBarPreference
+            android:key="sysui_qqs_count_key"
+            android:title="@string/sysui_qqs_count_title"
+            settings:max="8"
+            settings:min="3"
+            settings:units=""
+            android:persistent="false" />
 
     </PreferenceCategory>
 
