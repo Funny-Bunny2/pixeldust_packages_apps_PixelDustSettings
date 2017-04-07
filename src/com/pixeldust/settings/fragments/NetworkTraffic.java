@@ -65,7 +65,7 @@ public class NetworkTraffic extends SettingsPreferenceFragment
         mNetTrafficAutohide =
                 (SwitchPreference) findPreference(NETWORK_TRAFFIC_AUTOHIDE);
         mNetTrafficAutohide.setChecked((Settings.System.getInt(getContentResolver(),
-                Settings.System.NETWORK_TRAFFIC_AUTOHIDE, 1) == 1));
+                Settings.System.NETWORK_TRAFFIC_AUTOHIDE, 0) == 1));
         mNetTrafficAutohide.setOnPreferenceChangeListener(this);
 
         mNetTrafficAutohideThreshold = (CustomSeekBarPreference) findPreference(NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD);
@@ -78,7 +78,7 @@ public class NetworkTraffic extends SettingsPreferenceFragment
         if (TrafficStats.getTotalTxBytes() != TrafficStats.UNSUPPORTED &&
                 TrafficStats.getTotalRxBytes() != TrafficStats.UNSUPPORTED) {
             mNetTrafficVal = Settings.System.getInt(getContentResolver(),
-                    Settings.System.NETWORK_TRAFFIC_STATE, 3);
+                    Settings.System.NETWORK_TRAFFIC_STATE, 0);
             int intIndex = mNetTrafficVal & (MASK_UP + MASK_DOWN);
             intIndex = mNetTrafficState.findIndexOfValue(String.valueOf(intIndex));
             updateNetworkTrafficState(intIndex);

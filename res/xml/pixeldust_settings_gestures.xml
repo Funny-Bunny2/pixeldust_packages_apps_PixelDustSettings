@@ -22,13 +22,13 @@
          android:key="double_tap_sleep_gesture"
          android:title="@string/double_tap_to_sleep_title"
          android:summary="@string/double_tap_to_sleep_summary"
-         android:defaultValue="true" />
+         android:defaultValue="false" />
 
     <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
          android:key="double_tap_sleep_navbar"
          android:title="@string/double_tap_sleep_nav_bar_title"
          android:summary="@string/double_tap_sleep_nav_bar_summary"
-         android:defaultValue="true" />
+         android:defaultValue="false" />
 
     <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
          android:key="double_tap_sleep_anywhere"

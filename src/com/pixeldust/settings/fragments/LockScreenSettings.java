@@ -72,7 +72,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
             prefScreen.removePreference(mLockscreenCharging);
         } else {
         mLockscreenCharging.setChecked((Settings.System.getInt(getContentResolver(),
-                Settings.System.LOCKSCREEN_BATTERY_INFO, 1) == 1));
+                Settings.System.LOCKSCREEN_BATTERY_INFO, 0) == 1));
         mLockscreenCharging.setOnPreferenceChangeListener(this);
         }
 

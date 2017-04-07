@@ -65,7 +65,7 @@
             android:key="lockscreen_qs_disabled"
             android:title="@string/lockscreen_qs_disabled_title"
             android:summary="@string/lockscreen_qs_disabled_summary"
-            android:defaultValue="true"/>
+            android:defaultValue="false"/>
 
         <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
             android:key="qs_tile_title_visibility"

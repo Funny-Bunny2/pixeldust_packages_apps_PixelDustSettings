@@ -32,8 +32,7 @@
     <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
         android:key="lock_screen_show_weather"
         android:title="@string/weather_show_weather_title"
-        android:summary="@string/weather_show_weather_summary"
-        android:defaultValue="true" />
+        android:summary="@string/weather_show_weather_summary" />
 
     <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
         android:key="lock_screen_show_weather_location"
